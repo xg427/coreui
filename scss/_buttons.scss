@@ -23,20 +23,20 @@
   }
 
   &:focus,
-  &.focus {
+  &.#{$components-prefix}focus {
     outline: 0;
     box-shadow: $btn-focus-box-shadow;
   }
 
   // Disabled comes first so active can properly restyle
-  &.disabled,
+  &.#{$components-prefix}disabled,
   &:disabled {
     opacity: $btn-disabled-opacity;
     @include box-shadow(none);
   }
 
-  &:not(:disabled):not(.disabled):active,
-  &:not(:disabled):not(.disabled).active {
+  &:not(:disabled):not(.#{$components-prefix}disabled):active,
+  &:not(:disabled):not(.#{$components-prefix}disabled).#{$components-prefix}active {
     @include box-shadow($btn-active-box-shadow);
 
     &:focus {

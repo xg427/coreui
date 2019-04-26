@@ -18,7 +18,7 @@
     }
     &:focus,
     &:active,
-    &.active {
+    &.#{$components-prefix}active {
       z-index: 1;
     }
   }
@@ -43,13 +43,13 @@
   }
 
   // Reset rounded corners
-  > .#{$components-prefix}btn:not(:last-child):not(.dropdown-toggle),
-  > .#{$components-prefix}btn-group:not(:last-child) > .btn {
+  > .#{$components-prefix}btn:not(:last-child):not(.#{$components-prefix}dropdown-toggle),
+  > .#{$components-prefix}btn-group:not(:last-child) > .#{$components-prefix}btn {
     @include border-right-radius(0);
   }
 
   > .#{$components-prefix}btn:not(:first-child),
-  > .#{$components-prefix}btn-group:not(:first-child) > .btn {
+  > .#{$components-prefix}btn-group:not(:first-child) > .#{$components-prefix}btn {
     @include border-left-radius(0);
   }
 }
@@ -58,8 +58,8 @@
 //
 // Remix the default button sizing classes into new ones for easier manipulation.
 
-.#{$components-prefix}btn-group-sm > .btn { @extend .btn-sm; }
-.#{$components-prefix}btn-group-lg > .btn { @extend .btn-lg; }
+.#{$components-prefix}btn-group-sm > .#{$components-prefix}btn { @extend .#{$components-prefix}btn-sm; }
+.#{$components-prefix}btn-group-lg > .#{$components-prefix}btn { @extend .#{$components-prefix}btn-lg; }
 
 
 //
@@ -108,29 +108,29 @@
 // Vertical button groups
 //
 
-.btn-group-vertical {
+.#{$components-prefix}btn-group-vertical {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
 
-  > .btn,
-  > .btn-group {
+  > .#{$components-prefix}btn,
+  > .#{$components-prefix}btn-group {
     width: 100%;
   }
 
-  > .btn:not(:first-child),
-  > .btn-group:not(:first-child) {
+  > .#{$components-prefix}btn:not(:first-child),
+  > .#{$components-prefix}btn-group:not(:first-child) {
     margin-top: -$btn-border-width;
   }
 
   // Reset rounded corners
-  > .btn:not(:last-child):not(.dropdown-toggle),
-  > .btn-group:not(:last-child) > .btn {
+  > .#{$components-prefix}btn:not(:last-child):not(.#{$components-prefix}dropdown-toggle),
+  > .#{$components-prefix}btn-group:not(:last-child) > .#{$components-prefix}btn {
     @include border-bottom-radius(0);
   }
 
-  > .btn:not(:first-child),
-  > .btn-group:not(:first-child) > .btn {
+  > .#{$components-prefix}btn:not(:first-child),
+  > .#{$components-prefix}btn-group:not(:first-child) > .#{$components-prefix}btn {
     @include border-top-radius(0);
   }
 }
@@ -148,9 +148,9 @@
 // See https://github.com/twbs/bootstrap/pull/12794 and
 // https://github.com/twbs/bootstrap/pull/14559 for more information.
 
-.btn-group-toggle {
-  > .btn,
-  > .btn-group > .btn {
+.#{$components-prefix}btn-group-toggle {
+  > .#{$components-prefix}btn,
+  > .#{$components-prefix}btn-group > .#{$components-prefix}btn {
     margin-bottom: 0; // Override default `<label>` value
 
     input[type="radio"],

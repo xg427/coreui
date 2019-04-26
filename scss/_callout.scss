@@ -35,7 +35,7 @@
 .#{$components-prefix}callout p:last-child {
   margin-bottom: 0;
 }
-.#{$components-prefix}callout + .callout {
+.#{$components-prefix}callout + .#{$components-prefix}callout {
   margin-top: - .25rem;
 }
 

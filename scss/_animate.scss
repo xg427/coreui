@@ -1,13 +1,13 @@
-.animated {
+.#{$components-prefix}animated {
   animation-duration: 1s;
   // animation-fill-mode: both;
 }
 
-.animated.infinite {
+.#{$components-prefix}animated.#{$components-prefix}infinite {
   animation-iteration-count: infinite;
 }
 
-.animated.hinge {
+.#{$components-prefix}animated.#{$components-prefix}hinge {
   animation-duration: 2s;
 }
 
@@ -22,6 +22,6 @@
 }
 
 // stylelint-disable-next-line selector-class-pattern
-.fadeIn {
+.#{$components-prefix}fadeIn {
   animation-name: fadeIn;
 }
