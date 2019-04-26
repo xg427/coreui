@@ -1,4 +1,4 @@
-.breadcrumb {
+.#{$components-prefix}breadcrumb {
   display: flex;
   flex-wrap: wrap;
   padding: $breadcrumb-padding-y $breadcrumb-padding-x;
@@ -10,9 +10,9 @@
 
 }
 
-.breadcrumb-item {
+.#{$components-prefix}breadcrumb-item {
   // The separator between breadcrumbs (by default, a forward-slash: "/")
-  + .breadcrumb-item {
+  + .#{$components-prefix}breadcrumb-item {
     padding-left: $breadcrumb-item-padding;
 
     &::before {
@@ -29,26 +29,26 @@
   //
   // To trick IE into suppressing the underline, we give the pseudo-element an
   // underline and then immediately remove it.
-  + .breadcrumb-item:hover::before {
+  + .#{$components-prefix}breadcrumb-item:hover::before {
     text-decoration: underline;
   }
   // stylelint-disable-next-line no-duplicate-selectors
-  + .breadcrumb-item:hover::before {
+  + .#{$components-prefix}breadcrumb-item:hover::before {
     text-decoration: none;
   }
 
-  &.active {
+  &.#{$components-prefix}active {
     color: $breadcrumb-active-color;
   }
 }
 
 // CoreUI start
 *[dir="rtl"] {
-  .breadcrumb-item::before {
+  .#{$components-prefix}breadcrumb-item::before {
     padding-right: 0;
     padding-left: $breadcrumb-item-padding;
   }
-  .breadcrumb-item {
+  .#{$components-prefix}breadcrumb-item {
     padding-right: $breadcrumb-item-padding;
     padding-left: 0;
   }

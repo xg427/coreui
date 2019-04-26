@@ -1,13 +1,13 @@
 // stylelint-disable selector-no-qualifying-type
 
 // Make the div behave like a button
-.btn-group,
-.btn-group-vertical {
+.#{$components-prefix}btn-group,
+.#{$components-prefix}btn-group-vertical {
   position: relative;
   display: inline-flex;
   vertical-align: middle; // match .btn alignment given font-size hack above
 
-  > .btn {
+  > .#{$components-prefix}btn {
     position: relative;
     flex: 1 1 auto;
 
@@ -25,31 +25,31 @@
 }
 
 // Optional: Group multiple button groups together for a toolbar
-.btn-toolbar {
+.#{$components-prefix}btn-toolbar {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
 
-  .input-group {
+  .#{$components-prefix}input-group {
     width: auto;
   }
 }
 
-.btn-group {
+.#{$components-prefix}btn-group {
   // Prevent double borders when buttons are next to each other
-  > .btn:not(:first-child),
-  > .btn-group:not(:first-child) {
+  > .#{$components-prefix}btn:not(:first-child),
+  > .#{$components-prefix}btn-group:not(:first-child) {
     margin-left: -$btn-border-width;
   }
 
   // Reset rounded corners
-  > .btn:not(:last-child):not(.dropdown-toggle),
-  > .btn-group:not(:last-child) > .btn {
+  > .#{$components-prefix}btn:not(:last-child):not(.dropdown-toggle),
+  > .#{$components-prefix}btn-group:not(:last-child) > .btn {
     @include border-right-radius(0);
   }
 
-  > .btn:not(:first-child),
-  > .btn-group:not(:first-child) > .btn {
+  > .#{$components-prefix}btn:not(:first-child),
+  > .#{$components-prefix}btn-group:not(:first-child) > .btn {
     @include border-left-radius(0);
   }
 }
@@ -58,35 +58,35 @@
 //
 // Remix the default button sizing classes into new ones for easier manipulation.
 
-.btn-group-sm > .btn { @extend .btn-sm; }
-.btn-group-lg > .btn { @extend .btn-lg; }
+.#{$components-prefix}btn-group-sm > .btn { @extend .btn-sm; }
+.#{$components-prefix}btn-group-lg > .btn { @extend .btn-lg; }
 
 
 //
 // Split button dropdowns
 //
 
-.dropdown-toggle-split {
+.#{$components-prefix}dropdown-toggle-split {
   padding-right: $btn-padding-x * .75;
   padding-left: $btn-padding-x * .75;
 
   &::after,
-  .dropup &::after,
-  .dropright &::after {
+  .#{$components-prefix}dropup &::after,
+  .#{$components-prefix}dropright &::after {
     margin-left: 0;
   }
 
-  .dropleft &::before {
+  .#{$components-prefix}dropleft &::before {
     margin-right: 0;
   }
 }
 
-.btn-sm + .dropdown-toggle-split {
+.#{$components-prefix}btn-sm + .#{$components-prefix}dropdown-toggle-split {
   padding-right: $btn-padding-x-sm * .75;
   padding-left: $btn-padding-x-sm * .75;
 }
 
-.btn-lg + .dropdown-toggle-split {
+.#{$components-prefix}btn-lg + .#{$components-prefix}dropdown-toggle-split {
   padding-right: $btn-padding-x-lg * .75;
   padding-left: $btn-padding-x-lg * .75;
 }
@@ -94,11 +94,11 @@
 
 // The clickable button for toggling the menu
 // Set the same inset shadow as the :active state
-.btn-group.show .dropdown-toggle {
+.#{$components-prefix}btn-group.#{$components-prefix}show .#{$components-prefix}dropdown-toggle {
   @include box-shadow($btn-active-box-shadow);
 
   // Show no shadow for `.btn-link` since it has no other button styles.
-  &.btn-link {
+  &.#{$components-prefix}btn-link {
     @include box-shadow(none);
   }
 }

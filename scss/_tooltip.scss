@@ -1,5 +1,5 @@
 // Base class
-.tooltip {
+.#{$components-prefix}tooltip {
   position: absolute;
   z-index: $zindex-tooltip;
   display: block;
@@ -12,9 +12,9 @@
   word-wrap: break-word;
   opacity: 0;
 
-  &.show { opacity: $tooltip-opacity; }
+  &.#{$components-prefix}show { opacity: $tooltip-opacity; }
 
-  .arrow {
+  .#{$components-prefix}arrow {
     position: absolute;
     display: block;
     width: $tooltip-arrow-width;
@@ -29,10 +29,10 @@
   }
 }
 
-.bs-tooltip-top {
+.#{$components-prefix}bs-tooltip-top {
   padding: $tooltip-arrow-height 0;
 
-  .arrow {
+  .#{$components-prefix}arrow {
     bottom: 0;
 
     &::before {
@@ -43,10 +43,10 @@
   }
 }
 
-.bs-tooltip-right {
+.#{$components-prefix}bs-tooltip-right {
   padding: 0 $tooltip-arrow-height;
 
-  .arrow {
+  .#{$components-prefix}arrow {
     left: 0;
     width: $tooltip-arrow-height;
     height: $tooltip-arrow-width;
@@ -59,10 +59,10 @@
   }
 }
 
-.bs-tooltip-bottom {
+.#{$components-prefix}bs-tooltip-bottom {
   padding: $tooltip-arrow-height 0;
 
-  .arrow {
+  .#{$components-prefix}arrow {
     top: 0;
 
     &::before {
@@ -73,10 +73,10 @@
   }
 }
 
-.bs-tooltip-left {
+.#{$components-prefix}bs-tooltip-left {
   padding: 0 $tooltip-arrow-height;
 
-  .arrow {
+  .#{$components-prefix}arrow {
     right: 0;
     width: $tooltip-arrow-height;
     height: $tooltip-arrow-width;
@@ -89,23 +89,23 @@
   }
 }
 
-.bs-tooltip-auto {
+.#{$components-prefix}bs-tooltip-auto {
   &[x-placement^="top"] {
-    @extend .bs-tooltip-top;
+    @extend .#{$components-prefix}bs-tooltip-top;
   }
   &[x-placement^="right"] {
-    @extend .bs-tooltip-right;
+    @extend .#{$components-prefix}bs-tooltip-right;
   }
   &[x-placement^="bottom"] {
-    @extend .bs-tooltip-bottom;
+    @extend .#{$components-prefix}bs-tooltip-bottom;
   }
   &[x-placement^="left"] {
-    @extend .bs-tooltip-left;
+    @extend .#{$components-prefix}bs-tooltip-left;
   }
 }
 
 // Wrapper for the tooltip content
-.tooltip-inner {
+.#{$components-prefix}tooltip-inner {
   max-width: $tooltip-max-width;
   padding: $tooltip-padding-y $tooltip-padding-x;
   color: $tooltip-color;

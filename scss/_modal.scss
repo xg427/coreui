@@ -4,18 +4,18 @@
 // .modal-content   - actual modal w/ bg and corners and stuff
 
 
-.modal-open {
+.#{$components-prefix}modal-open {
   // Kill the scroll on the body
   overflow: hidden;
 
-  .modal {
+  .#{$components-prefix}modal {
     overflow-x: hidden;
     overflow-y: auto;
   }
 }
 
 // Container that the modal scrolls within
-.modal {
+.#{$components-prefix}modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -33,7 +33,7 @@
 }
 
 // Shell div to position the modal with bottom padding
-.modal-dialog {
+.#{$components-prefix}modal-dialog {
   position: relative;
   width: auto;
   margin: $modal-dialog-margin;
@@ -41,35 +41,35 @@
   pointer-events: none;
 
   // When fading in the modal, animate it to slide down
-  .modal.fade & {
+  .#{$components-prefix}modal.#{$components-prefix}fade & {
     @include transition($modal-transition);
     transform: $modal-fade-transform;
   }
-  .modal.show & {
+  .#{$components-prefix}modal.#{$components-prefix}show & {
     transform: $modal-show-transform;
   }
 }
 
-.modal-dialog-scrollable {
+.#{$components-prefix}modal-dialog-scrollable {
   display: flex; // IE10/11
   max-height: calc(100% - #{$modal-dialog-margin * 2});
 
-  .modal-content {
+  .#{$components-prefix}modal-content {
     max-height: calc(100vh - #{$modal-dialog-margin * 2}); // IE10/11
     overflow: hidden;
   }
 
-  .modal-header,
-  .modal-footer {
+  .#{$components-prefix}modal-header,
+  .#{$components-prefix}modal-footer {
     flex-shrink: 0;
   }
 
-  .modal-body {
+  .#{$components-prefix}modal-body {
     overflow-y: auto;
   }
 }
 
-.modal-dialog-centered {
+.#{$components-prefix}modal-dialog-centered {
   display: flex;
   align-items: center;
   min-height: calc(100% - #{$modal-dialog-margin * 2});
@@ -82,12 +82,12 @@
   }
 
   // Ensure `.modal-body` shows scrollbar (IE10/11)
-  &.modal-dialog-scrollable {
+  &.#{$components-prefix}modal-dialog-scrollable {
     flex-direction: column;
     justify-content: center;
     height: 100%;
 
-    .modal-content {
+    .#{$components-prefix}modal-content {
       max-height: none;
     }
 
@@ -98,7 +98,7 @@
 }
 
 // Actual modal
-.modal-content {
+.#{$components-prefix}modal-content {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -116,7 +116,7 @@
 }
 
 // Modal background
-.modal-backdrop {
+.#{$components-prefix}modal-backdrop {
   position: fixed;
   top: 0;
   left: 0;
@@ -126,13 +126,13 @@
   background-color: $modal-backdrop-bg;
 
   // Fade for backdrop
-  &.fade { opacity: 0; }
-  &.show { opacity: $modal-backdrop-opacity; }
+  &.#{$components-prefix}fade { opacity: 0; }
+  &.#{$components-prefix}show { opacity: $modal-backdrop-opacity; }
 }
 
 // Modal header
 // Top section of the modal w/ title and dismiss
-.modal-header {
+.#{$components-prefix}modal-header {
   display: flex;
   align-items: flex-start; // so the close btn always stays on the upper right corner
   justify-content: space-between; // Put modal header elements (title and dismiss) on opposite ends
@@ -140,7 +140,7 @@
   border-bottom: $modal-header-border-width solid $modal-header-border-color;
   @include border-top-radius($modal-content-border-radius);
 
-  .close {
+  .#{$components-prefix}close {
     padding: $modal-header-padding;
     // auto on the left force icon to the right even when there is no .modal-title
     margin: (-$modal-header-padding-y) (-$modal-header-padding-x) (-$modal-header-padding-y) auto;
@@ -148,14 +148,14 @@
 }
 
 // Title text within header
-.modal-title {
+.#{$components-prefix}modal-title {
   margin-bottom: 0;
   line-height: $modal-title-line-height;
 }
 
 // Modal body
 // Where all modal content resides (sibling of .modal-header and .modal-footer)
-.modal-body {
+.#{$components-prefix}modal-body {
   position: relative;
   // Enable `flex-grow: 1` so that the body take up as much space as possible
   // when should there be a fixed height on `.modal-dialog`.
@@ -164,7 +164,7 @@
 }
 
 // Footer (for actions)
-.modal-footer {
+.#{$components-prefix}modal-footer {
   display: flex;
   align-items: center; // vertically center
   justify-content: flex-end; // Right align buttons with flex property because text-align doesn't work on flex items
@@ -178,7 +178,7 @@
 }
 
 // Measure scrollbar width for padding body during modal show/hide
-.modal-scrollbar-measure {
+.#{$components-prefix}modal-scrollbar-measure {
   position: absolute;
   top: -9999px;
   width: 50px;
@@ -189,20 +189,20 @@
 // Scale up the modal
 @include media-breakpoint-up(sm) {
   // Automatically set modal's width for larger viewports
-  .modal-dialog {
+  .#{$components-prefix}modal-dialog {
     max-width: $modal-md;
     margin: $modal-dialog-margin-y-sm-up auto;
   }
 
-  .modal-dialog-scrollable {
+  .#{$components-prefix}modal-dialog-scrollable {
     max-height: calc(100% - #{$modal-dialog-margin-y-sm-up * 2});
 
-    .modal-content {
+    .#{$components-prefix}modal-content {
       max-height: calc(100vh - #{$modal-dialog-margin-y-sm-up * 2});
     }
   }
 
-  .modal-dialog-centered {
+  .#{$components-prefix}modal-dialog-centered {
     min-height: calc(100% - #{$modal-dialog-margin-y-sm-up * 2});
 
     &::before {
@@ -210,34 +210,34 @@
     }
   }
 
-  .modal-content {
+  .#{$components-prefix}modal-content {
     @include box-shadow($modal-content-box-shadow-sm-up);
   }
 
-  .modal-sm { max-width: $modal-sm; }
+  .#{$components-prefix}modal-sm { max-width: $modal-sm; }
 }
 
 @include media-breakpoint-up(lg) {
-  .modal-lg,
-  .modal-xl {
+  .#{$components-prefix}modal-lg,
+  .#{$components-prefix}modal-xl {
     max-width: $modal-lg;
   }
 }
 
 @include media-breakpoint-up(xl) {
-  .modal-xl { max-width: $modal-xl; }
+  .#{$components-prefix}modal-xl { max-width: $modal-xl; }
 }
 
 // CoreUI specific changes start
 
 @each $color, $value in $theme-colors {
-  .modal-#{$color} {
+  .#{$components-prefix}modal-#{$color} {
 
-    .modal-content {
+    .#{$components-prefix}modal-content {
       border-color: $value;
     }
 
-    .modal-header {
+    .#{$components-prefix}modal-header {
       color: #fff;
       background-color: $value;
     }

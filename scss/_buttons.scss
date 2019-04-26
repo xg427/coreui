@@ -4,7 +4,7 @@
 // Base styles
 //
 
-.btn {
+.#{$components-prefix}btn {
   display: inline-block;
   font-family: $btn-font-family;
   font-weight: $btn-font-weight;
@@ -55,8 +55,8 @@
 }
 
 // Future-proof disabling of clicks on `<a>` elements
-a.btn.disabled,
-fieldset:disabled a.btn {
+a.#{$components-prefix}btn.#{$components-prefix}disabled,
+fieldset:disabled a.#{$components-prefix}btn {
   pointer-events: none;
 }
 
@@ -66,13 +66,13 @@ fieldset:disabled a.btn {
 //
 
 @each $color, $value in $theme-colors {
-  .btn-#{$color} {
+  .#{$components-prefix}btn-#{$color} {
     @include button-variant($value, $value);
   }
 }
 
 @each $color, $value in $theme-colors {
-  .btn-outline-#{$color} {
+  .#{$components-prefix}btn-outline-#{$color} {
     @include button-outline-variant($value);
   }
 }
@@ -83,7 +83,7 @@ fieldset:disabled a.btn {
 //
 
 // Make a button look and behave like a link
-.btn-link {
+.#{$components-prefix}btn-link {
   font-weight: $font-weight-normal;
   color: $link-color;
   text-decoration: $link-decoration;
@@ -94,13 +94,13 @@ fieldset:disabled a.btn {
   }
 
   &:focus,
-  &.focus {
+  &.#{$components-prefix}focus {
     text-decoration: $link-hover-decoration;
     box-shadow: none;
   }
 
   &:disabled,
-  &.disabled {
+  &.#{$components-prefix}disabled {
     color: $btn-link-disabled-color;
     pointer-events: none;
   }
@@ -113,11 +113,11 @@ fieldset:disabled a.btn {
 // Button Sizes
 //
 
-.btn-lg {
+.#{$components-prefix}btn-lg {
   @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
 }
 
-.btn-sm {
+.#{$components-prefix}btn-sm {
   @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
 }
 
@@ -126,12 +126,12 @@ fieldset:disabled a.btn {
 // Block button
 //
 
-.btn-block {
+.#{$components-prefix}btn-block {
   display: block;
   width: 100%;
 
   // Vertically space out multiple block buttons
-  + .btn-block {
+  + .#{$components-prefix}btn-block {
     margin-top: $btn-block-spacing-y;
   }
 }
@@ -140,7 +140,7 @@ fieldset:disabled a.btn {
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-  &.btn-block {
+  &.#{$components-prefix}btn-block {
     width: 100%;
   }
 }

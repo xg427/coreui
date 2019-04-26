@@ -1,18 +1,18 @@
-.fade {
+.#{$components-prefix}fade {
   @include transition($transition-fade);
 
-  &:not(.show) {
+  &:not(.#{$components-prefix}show) {
     opacity: 0;
   }
 }
 
-.collapse {
-  &:not(.show) {
+.#{$components-prefix}collapse {
+  &:not(.#{$components-prefix}show) {
     display: none;
   }
 }
 
-.collapsing {
+.#{$components-prefix}collapsing {
   position: relative;
   height: 0;
   overflow: hidden;

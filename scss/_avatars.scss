@@ -1,10 +1,10 @@
-.img-avatar {
+.#{$components-prefix}img-avatar {
   max-width: 100%;
   height: auto;
   border-radius: 50em;
 }
 
-.avatar {
+.#{$components-prefix}avatar {
   @include avatar($avatar-width,$avatar-status-width);
 
   > img {
@@ -13,21 +13,21 @@
   }
 }
 
-.avatar-lg {
+.#{$components-prefix}avatar-lg {
   @include avatar($avatar-lg-width,$avatar-lg-status-width);
 }
 
-.avatar-sm {
+.#{$components-prefix}avatar-sm {
   @include avatar($avatar-sm-width,$avatar-sm-status-width);
 }
 
-.avatar-xs {
+.#{$components-prefix}avatar-xs {
   @include avatar($avatar-xs-width,$avatar-xs-status-width);
 }
 
-.avatars-stack {
+.#{$components-prefix}avatars-stack {
 
-  .avatar {
+  .#{$components-prefix}avatar {
     margin-right: - ($avatar-width / 2);
     transition: margin-right $layout-transition-speed;
 
@@ -36,15 +36,15 @@
     }
   }
 
-  .avatar-lg {
+  .#{$components-prefix}avatar-lg {
     margin-right: - ($avatar-lg-width / 2);
   }
 
-  .avatar-sm {
+  .#{$components-prefix}avatar-sm {
     margin-right: - ($avatar-sm-width / 2);
   }
 
-  .avatar-xs {
+  .#{$components-prefix}avatar-xs {
     margin-right: - ($avatar-xs-width / 2);
   }
 }

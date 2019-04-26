@@ -1,7 +1,7 @@
 // Temp fix for reactstrap
-.app-header {
-  .navbar-nav {
-    .dropdown-menu-right {
+.#{$components-prefix}app-header {
+  .#{$components-prefix}navbar-nav {
+    .#{$components-prefix}dropdown-menu-right {
       right: auto;
     }
   }

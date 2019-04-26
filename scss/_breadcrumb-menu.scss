@@ -1,35 +1,35 @@
-.breadcrumb-menu {
+.#{$components-prefix}breadcrumb-menu {
   margin-left: auto;
 
   &::before {
     display: none;
   }
 
-  .btn-group {
+  .#{$components-prefix}btn-group {
     vertical-align: top;
   }
 
-  .btn {
+  .#{$components-prefix}btn {
     padding: 0 $input-btn-padding-x;
     color: $text-muted;
     vertical-align: top;
     border: 0;
 
     &:hover,
-    &.active {
+    &.#{$components-prefix}active {
       color: $body-color;
       background: transparent;
     }
   }
 
-  .open {
-    .btn {
+  .#{$components-prefix}open {
+    .#{$components-prefix}btn {
       color: $body-color;
       background: transparent;
     }
   }
 
-  .dropdown-menu {
+  .#{$components-prefix}dropdown-menu {
     min-width: 180px;
     line-height: $line-height-base;
   }
@@ -37,7 +37,7 @@
 
 // Right-to-Left Support
 *[dir="rtl"] {
-  .breadcrumb-menu {
+  .#{$components-prefix}breadcrumb-menu {
     margin-right: auto;
     margin-left: initial;
   }

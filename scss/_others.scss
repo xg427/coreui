@@ -1,4 +1,4 @@
 // stylelint-disable selector-no-qualifying-type
-hr.transparent {
+hr.#{$components-prefix}transparent {
   border-top: 1px solid transparent;
 }

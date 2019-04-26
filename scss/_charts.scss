@@ -1,8 +1,8 @@
-.chart-wrapper canvas {
+.#{$components-prefix}chart-wrapper canvas {
   width: 100%;
 }
 // stylelint-disable selector-no-qualifying-type, selector-type-no-unknown
-base-chart.chart {
+base-chart.#{$components-prefix}chart {
   display: block;
 }
 
@@ -10,7 +10,7 @@ canvas {
   user-select: none;
 }
 
-.chartjs-tooltip {
+.#{$components-prefix}chartjs-tooltip {
   position: absolute;
   z-index: $zindex-sticky + 1;
   display: flex;
@@ -24,30 +24,30 @@ canvas {
   transform: translate(-50%, 0);
   @include border-radius($border-radius);
 
-  .tooltip-header {
+  .#{$components-prefix}tooltip-header {
     margin-bottom: ($spacer * .5);
   }
 
-  .tooltip-header-item {
+  .#{$components-prefix}tooltip-header-item {
     font-size: $font-size-sm;
     font-weight: $font-weight-bold;
   }
 
-  .tooltip-body-item {
+  .#{$components-prefix}tooltip-body-item {
     display: flex;
     align-items: center;
     font-size: $font-size-sm;
     white-space: nowrap;
   }
 
-  .tooltip-body-item-color {
+  .#{$components-prefix}tooltip-body-item-color {
     display: inline-block;
     width: $font-size-base;
     height: $font-size-base;
     margin-right: $font-size-base;
   }
 
-  .tooltip-body-item-value {
+  .#{$components-prefix}tooltip-body-item-value {
     padding-left: $spacer;
     margin-left: auto;
     font-weight: $font-weight-bold;

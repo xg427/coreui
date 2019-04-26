@@ -5,13 +5,13 @@
 // and abandoned it in Bootstrap v3 because it breaks lots of third-party widgets (including Google Maps)
 // which weren't expecting the images within themselves to be involuntarily resized.
 // See also https://github.com/twbs/bootstrap/issues/18178
-.img-fluid {
+.#{$components-prefix}img-fluid {
   @include img-fluid;
 }
 
 
 // Image thumbnails
-.img-thumbnail {
+.#{$components-prefix}img-thumbnail {
   padding: $thumbnail-padding;
   background-color: $thumbnail-bg;
   border: $thumbnail-border-width solid $thumbnail-border-color;
@@ -26,24 +26,24 @@
 // Figures
 //
 
-.figure {
+.#{$components-prefix}figure {
   // Ensures the caption's text aligns with the image.
   display: inline-block;
 }
 
-.figure-img {
+.#{$components-prefix}figure-img {
   margin-bottom: $spacer / 2;
   line-height: 1;
 }
 
-.figure-caption {
+.#{$components-prefix}figure-caption {
   @include font-size($figure-caption-font-size);
   color: $figure-caption-color;
 }
 
 // CoreUI start
 // ToDo: refactor
-.img-circle {
+.#{$components-prefix}img-circle {
   max-width: 100%;
   height: auto;
   border-radius: 50em;

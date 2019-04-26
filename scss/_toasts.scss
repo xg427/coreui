@@ -1,4 +1,4 @@
-.toast {
+.#{$components-prefix}toast {
   max-width: $toast-max-width;
   overflow: hidden; // cheap rounded corners on nested items
   @include font-size($toast-font-size);
@@ -15,21 +15,21 @@
     margin-bottom: $toast-padding-x;
   }
 
-  &.showing {
+  &.#{$components-prefix}showing {
     opacity: 1;
   }
 
-  &.show {
+  &.#{$components-prefix}show {
     display: block;
     opacity: 1;
   }
 
-  &.hide {
+  &.#{$components-prefix}hide {
     display: none;
   }
 }
 
-.toast-header {
+.#{$components-prefix}toast-header {
   display: flex;
   align-items: center;
   padding: $toast-padding-y $toast-padding-x;
@@ -39,6 +39,6 @@
   border-bottom: $toast-border-width solid $toast-header-border-color;
 }
 
-.toast-body {
+.#{$components-prefix}toast-body {
   padding: $toast-padding-x; // apply to both vertical and horizontal
 }

@@ -1,8 +1,8 @@
-.media {
+.#{$components-prefix}media {
   display: flex;
   align-items: flex-start;
 }
 
-.media-body {
+.#{$components-prefix}media-body {
   flex: 1;
 }
